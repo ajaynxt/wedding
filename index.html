@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Luxury Indian wedding planner and photographer concept website with ten switchable hero styles.">
+  <meta name="theme-color" content="#120b0d">
+  <title>VOW & FRAME | AJAYNXT Wedding Showcase</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="shell nav">
+    <a class="brand" href="#home" aria-label="Vow and Frame home">
+      <span class="brand-mark"><i></i><b>V</b></span>
+      <span><strong>VOW & FRAME</strong><small>WEDDINGS</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false">Menu</button>
+    <nav id="navLinks">
+      <a href="#stories">Stories</a>
+      <a href="#services">Services</a>
+      <a href="#films">Films</a>
+      <a href="#packages">Packages</a>
+      <a href="#availability">Availability</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="button primary nav-cta" href="#contact">Check Your Date</a>
+  </div>
+</header>
+
+<aside class="customizer" aria-label="Design controls">
+  <button class="customizer-toggle" id="customizerToggle">Customize</button>
+  <div class="customizer-panel" id="customizerPanel">
+    <section>
+      <h3>Hero Styles</h3>
+      <div class="style-list" id="styleList"></div>
+    </section>
+    <section>
+      <h3>Color Library</h3>
+      <input id="colorSearch" type="search" placeholder="Search color or enter #HEX">
+      <div class="color-list" id="colorList"></div>
+      <div class="control-grid">
+        <input id="colorPicker" type="color" value="#be8a58" aria-label="Choose accent color">
+        <button id="lockColor">Lock Color</button>
+      </div>
+    </section>
+    <section>
+      <h3>Text Library</h3>
+      <div class="text-list" id="textList"></div>
+      <button class="wide-control" id="lockText">Lock Text</button>
+    </section>
+    <section>
+      <h3>Font Library</h3>
+      <input id="fontSearch" type="search" placeholder="Search font">
+      <select id="fontSelect">
+        <option value="Inter, Arial, sans-serif">Inter</option>
+        <option value="Manrope, Arial, sans-serif">Manrope</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="'Times New Roman', serif">Times New Roman</option>
+        <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet</option>
+        <option value="Arial, sans-serif">Arial</option>
+      </select>
+      <button class="wide-control" id="lockFont">Lock Font</button>
+    </section>
+    <section class="control-grid">
+      <button id="themeToggle">Light Mode</button>
+      <button id="autoToggle">Pause Auto</button>
+    </section>
+  </div>
+</aside>
+
+<main id="main">
+  <section class="hero hero-01" id="home">
+    <div class="hero-photo" id="heroPhoto"></div>
+    <div class="hero-shade"></div>
+
+    <div class="hero-grid shell">
+      <div class="hero-copy reveal">
+        <span class="eyebrow" id="heroKicker">Wedding Photography · Films · Planning</span>
+        <h1 id="heroTitle">Your Wedding, Remembered Like a Film.</h1>
+        <p id="heroText">A luxury Indian wedding experience built around real emotion, thoughtful planning and imagery that still feels alive years later.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#stories">View Wedding Stories</a>
+          <button class="button glass" id="watchShowreel">Watch Showreel</button>
+        </div>
+        <div class="hero-trust">
+          <span>Photography & Films</span>
+          <span>Destination Planning</span>
+          <span>Albums & Reels</span>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal">
+        <span class="mini-label" id="heroCardLabel">Featured Celebration</span>
+        <h2 id="heroCardTitle">A Royal Udaipur Wedding</h2>
+        <p id="heroCardText">Three days · Palace venue · Photography, films and guest experience</p>
+        <div class="hero-card-facts">
+          <span><b>3</b> days</span>
+          <span><b>6</b> events</span>
+          <span><b>1</b> story</span>
+        </div>
+        <a class="button primary" href="#contact">Plan a Consultation</a>
+      </aside>
+    </div>
+
+    <form class="quick-enquiry shell reveal" id="quickEnquiry">
+      <label>Wedding Date<input name="date" type="date" required></label>
+      <label>City / Destination<input name="city" placeholder="e.g. Jaipur, Goa, Delhi" required></label>
+      <label>Guest Count<select name="guests"><option>Under 100</option><option>100–250</option><option>250–500</option><option>500+</option></select></label>
+      <label>Primary Requirement<select name="requirement"><option>Photography & Films</option><option>Full Wedding Planning</option><option>Destination Wedding</option><option>Décor & Production</option><option>Social Reels & Content</option></select></label>
+      <label>Phone / WhatsApp<input name="phone" inputmode="tel" required></label>
+      <button class="button primary" type="submit">Check Availability</button>
+    </form>
+
+    <div class="style-controller shell">
+      <button id="previousStyle" aria-label="Previous hero style">‹</button>
+      <div id="styleDots"></div>
+      <button id="nextStyle" aria-label="Next hero style">›</button>
+      <span id="styleName">01 · Royal Wedding Cinema</span>
+    </div>
+  </section>
+
+  <section class="trust-strip">
+    <div class="shell">
+      <span>Structured Enquiry</span>
+      <span>Films & Social Reels</span>
+      <span>Album Selection</span>
+      <span>Destination Logistics</span>
+      <span>WhatsApp Booking</span>
+    </div>
+  </section>
+
+  <section class="section shell" id="stories">
+    <div class="section-heading reveal">
+      <div><span class="eyebrow">Wedding Stories</span><h2>Every celebration needs its own visual language</h2></div>
+      <p>Browse complete story directions across ceremony, portrait, candid, destination and pre-wedding moments instead of seeing only random highlight photographs.</p>
+    </div>
+    <div class="stories-grid" id="storiesGrid"></div>
+  </section>
+
+  <section class="section services-section" id="services">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">End-to-End Services</span><h2>Creative storytelling and practical wedding operations</h2></div>
+        <p>Luxury clients need clarity on photography, films, décor, guest movement, event flow and delivery timelines before they book.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal"><span>01</span><h3>Wedding Photography</h3><p>Candid, editorial, family, ceremony and couple portraits with a clear shot plan.</p><a href="#contact">Discuss photography</a></article>
+        <article class="service-card reveal"><span>02</span><h3>Cinematic Films</h3><p>Teasers, highlights, full ceremony edits, interviews and social-first reels.</p><a href="#films">Watch film styles</a></article>
+        <article class="service-card reveal"><span>03</span><h3>Wedding Planning</h3><p>Timeline, vendors, budgets, production, hospitality and on-ground coordination.</p><a href="#contact">Plan the celebration</a></article>
+        <article class="service-card reveal"><span>04</span><h3>Destination Weddings</h3><p>Venue shortlist, guest travel, rooming, transport, welcome desks and itinerary.</p><a href="#destinations">Explore destinations</a></article>
+        <article class="service-card reveal"><span>05</span><h3>Décor & Production</h3><p>Design language, floral direction, lighting, stage, sound and event transitions.</p><a href="#contact">Share your moodboard</a></article>
+        <article class="service-card reveal"><span>06</span><h3>Albums & Archives</h3><p>Shortlisting, retouching, album design, film delivery and long-term file structure.</p><a href="#albums">View album formats</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section film-section" id="films">
+    <div class="shell film-grid">
+      <div class="film-copy reveal">
+        <span class="eyebrow">Wedding Cinema</span>
+        <h2>Films built from emotion, not a checklist of slow-motion shots.</h2>
+        <p>Preview the role of teasers, highlight films, ceremony edits and vertical reels. Connect these cards to the client’s YouTube, Vimeo or hosted video library.</p>
+        <div class="film-tabs" id="filmTabs"></div>
+        <button class="button primary" id="playFilm">Play Selected Film</button>
+      </div>
+      <div class="film-player reveal" id="filmPlayer">
+        <div class="film-photo" id="filmPhoto"></div>
+        <span class="play-button">▶</span>
+        <div class="film-caption"><small id="filmType">Wedding Highlight</small><strong id="filmTitle">The Palace Vows</strong><span id="filmDuration">08:42 minutes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell" id="albums">
+    <div class="section-heading reveal">
+      <div><span class="eyebrow">Albums & Deliverables</span><h2>Know exactly what arrives after the wedding</h2></div>
+      <p>Delivery expectations, selection workflow and revision stages should be written down clearly, especially for films, reels and physical albums.</p>
+    </div>
+    <div class="album-layout">
+      <div class="album-viewer reveal">
+        <div class="album-page left" id="albumLeft"></div>
+        <div class="album-page right" id="albumRight"></div>
+        <button id="previousAlbum" aria-label="Previous album spread">‹</button>
+        <button id="nextAlbum" aria-label="Next album spread">›</button>
+      </div>
+      <article class="album-details reveal">
+        <span class="eyebrow">Signature Album</span>
+        <h3 id="albumTitle">The Ceremony Edit</h3>
+        <p id="albumText">A narrative album combining rituals, family portraits, couple frames and celebration details.</p>
+        <div class="deliverables">
+          <span>Online gallery</span><span>High-resolution photographs</span><span>Album design proof</span><span>Film delivery portal</span><span>Backup guidance</span><span>Social preview set</span>
+        </div>
+        <button class="button primary" id="albumEnquiry">Ask About Albums</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="section packages-section" id="packages">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">Packages</span><h2>Start with the scope, then build the right team</h2></div>
+        <p>Package names below are concept examples. Final pricing depends on dates, cities, event count, crew, travel, deliverables and production requirements.</p>
+      </div>
+      <div class="package-grid">
+        <article class="package-card reveal">
+          <span class="package-label">Photography</span><h3>Essential Story</h3><p class="price">Custom Quote</p>
+          <ul><li>Up to two events</li><li>Candid + traditional coverage</li><li>Online gallery</li><li>Curated social previews</li></ul>
+          <button data-package="Essential Story">Request Scope</button>
+        </article>
+        <article class="package-card featured reveal">
+          <span class="package-label">Photography + Film</span><h3>Signature Wedding</h3><p class="price">Custom Quote</p>
+          <ul><li>Multi-event coverage</li><li>Cinematic highlight film</li><li>Vertical social reels</li><li>Premium album consultation</li></ul>
+          <button data-package="Signature Wedding">Request Scope</button>
+        </article>
+        <article class="package-card reveal">
+          <span class="package-label">Planning + Production</span><h3>Full Celebration</h3><p class="price">Custom Quote</p>
+          <ul><li>Planning and vendor coordination</li><li>Décor and production direction</li><li>Guest logistics</li><li>Photography and films</li></ul>
+          <button data-package="Full Celebration">Request Scope</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section destinations-section" id="destinations">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">Destination Weddings</span><h2>Choose the destination for the experience, not only the photograph</h2></div>
+        <p>Venue capacity, guest travel, weather, indoor backup, food, room inventory and local production access all matter.</p>
+      </div>
+      <div class="destination-grid">
+        <article class="destination-card reveal"><div class="destination-photo udaipur"></div><div><h3>Udaipur</h3><p>Palace courtyards, lakeside celebrations and royal architecture.</p><span>Heritage · Luxury · Multi-day</span></div></article>
+        <article class="destination-card reveal"><div class="destination-photo jaipur"></div><div><h3>Jaipur</h3><p>Grand hotels, forts, vibrant design and strong event infrastructure.</p><span>Royal · Accessible · Colourful</span></div></article>
+        <article class="destination-card reveal"><div class="destination-photo goa"></div><div><h3>Goa</h3><p>Beach ceremonies, resort weekends and relaxed guest itineraries.</p><span>Coastal · Resort · Intimate</span></div></article>
+        <article class="destination-card reveal"><div class="destination-photo hills"></div><div><h3>Hills</h3><p>Mountain resorts, forest venues and intimate outdoor celebrations.</p><span>Scenic · Seasonal · Intimate</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section availability-section" id="availability">
+    <div class="shell availability-grid">
+      <div class="reveal">
+        <span class="eyebrow">Availability Calendar</span>
+        <h2>Check the date before falling in love with the portfolio.</h2>
+        <p>Select a date to include it in the enquiry. Dates marked “Limited” require schedule and travel confirmation.</p>
+        <div class="availability-key"><span><i class="available"></i> Available</span><span><i class="limited"></i> Limited</span><span><i class="booked"></i> Booked</span></div>
+      </div>
+      <div class="calendar reveal">
+        <div class="calendar-header"><button id="previousMonth">‹</button><h3 id="calendarTitle"></h3><button id="nextMonth">›</button></div>
+        <div class="weekdays"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <div class="calendar-days" id="calendarDays"></div>
+        <div class="selected-date">Selected date: <strong id="selectedDate">None</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process-section">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">Booking Process</span><h2>A calm process for a beautifully chaotic week</h2></div>
+      </div>
+      <div class="process-grid">
+        <article class="reveal"><b>01</b><h3>Discovery Call</h3><p>Dates, events, cities, priorities, family expectations and visual taste.</p></article>
+        <article class="reveal"><b>02</b><h3>Scope & Proposal</h3><p>Crew, coverage, planning responsibilities, deliverables and payment schedule.</p></article>
+        <article class="reveal"><b>03</b><h3>Creative Planning</h3><p>Timelines, mood, shot priorities, production notes and event logistics.</p></article>
+        <article class="reveal"><b>04</b><h3>Wedding Week</h3><p>Coverage, coordination, backups, data handling and family communication.</p></article>
+        <article class="reveal"><b>05</b><h3>Post Production</h3><p>Previews, selection, films, albums, revisions and final archive delivery.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section social-section">
+    <div class="shell social-grid">
+      <div class="reveal"><span class="eyebrow">Social-First Content</span><h2>Reels that feel connected to the wedding story.</h2><p>Use the vertical-content workflow for rapid previews, vendor collaborations and couple-approved social sharing.</p><button class="button primary" id="reelEnquiry">Ask About Reel Coverage</button></div>
+      <div class="reel-wall reveal">
+        <button data-reel="Haldi Reel"><span class="reel-photo r1"></span><i>▶</i><b>Haldi</b></button>
+        <button data-reel="Varmala Reel"><span class="reel-photo r2"></span><i>▶</i><b>Varmala</b></button>
+        <button data-reel="Bride Portrait Reel"><span class="reel-photo r3"></span><i>▶</i><b>Portraits</b></button>
+        <button data-reel="Palace Wedding Reel"><span class="reel-photo r4"></span><i>▶</i><b>Destination</b></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section proof-section">
+    <div class="shell">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">Trust Before Booking</span><h2>Show proof that can actually be checked</h2></div>
+        <p>A real client website should include verified full galleries, complete films, written delivery terms, backup policies and genuine reviews with permission.</p>
+      </div>
+      <div class="proof-grid">
+        <article class="proof-card reveal"><h3>Complete Galleries</h3><p>Not only the ten strongest Instagram photographs.</p></article>
+        <article class="proof-card reveal"><h3>Full Film Samples</h3><p>So clients understand editing, audio and storytelling quality.</p></article>
+        <article class="proof-card reveal"><h3>Clear Deliverables</h3><p>Number of edits, delivery stages and album process in writing.</p></article>
+        <article class="proof-card reveal"><h3>Backup Workflow</h3><p>Camera redundancy, file copies and long-term archive expectations.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section">
+    <div class="shell faq-grid">
+      <div class="reveal"><span class="eyebrow">Frequently Asked</span><h2>Questions couples should ask early</h2></div>
+      <div class="faq-list reveal">
+        <details><summary>How early should we enquire?</summary><p>Popular dates and destinations can book far ahead. Enquire once the date or shortlist is reasonably clear.</p></details>
+        <details><summary>Are travel and stay included?</summary><p>They should be shown separately or clearly included in the written proposal based on city, crew and event schedule.</p></details>
+        <details><summary>When are photographs and films delivered?</summary><p>The contract should specify preview, gallery, film, revision and album timelines rather than using a vague verbal promise.</p></details>
+        <details><summary>Are the packages and wedding stories here real?</summary><p>No. This is a portfolio concept. Replace all names, claims, dates and examples with verified client information.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <div class="shell contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Build With AJAYNXT</span>
+        <h2>Create a wedding website that feels as considered as the celebration.</h2>
+        <p>This concept routes enquiries to AJAYNXT. Replace the brand, portfolio, packages, dates and contact details before a client launch.</p>
+        <div class="contact-points"><span>Photographer portfolios</span><span>Wedding planner websites</span><span>Destination wedding studios</span></div>
+      </div>
+      <form class="contact-form reveal" id="contactForm">
+        <label>Name<input name="name" required></label>
+        <label>Studio / Company<input name="company"></label>
+        <label>Phone / WhatsApp<input name="phone" inputmode="tel" required></label>
+        <label>Website Type<select name="type"><option>Wedding Photographer</option><option>Wedding Planner</option><option>Photo + Film Studio</option><option>Destination Wedding Company</option></select></label>
+        <label class="full">Message<textarea name="message" rows="5"></textarea></label>
+        <button class="button primary full" type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell footer-grid">
+    <div><a class="brand" href="#home"><span class="brand-mark"><i></i><b>V</b></span><span><strong>VOW & FRAME</strong><small>WEDDINGS</small></span></a><p>Luxury wedding concept by AJAYNXT.</p></div>
+    <div><strong>Explore</strong><a href="#stories">Stories</a><a href="#films">Films</a><a href="#packages">Packages</a></div>
+    <div><strong>AJAYNXT</strong><a href="https://ajaynxt.com">ajaynxt.com</a><a href="tel:+919929562585">+91 99295 62585</a></div>
+  </div>
+  <div class="shell footer-bottom">Concept content only. Names, packages, availability and deliverables are illustrative.</div>
+</footer>
+
+<div class="mobile-actions"><a href="tel:+919929562585">Call</a><a href="https://wa.me/919929562585">WhatsApp</a><a href="#availability">Date</a><a href="#contact">Book</a></div>
+
+<div class="modal" id="mediaModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="modal-visual" id="modalVisual"><span>▶</span></div>
+    <h2 id="modalTitle">Wedding Film</h2>
+    <p>Connect this preview to the client’s real YouTube, Vimeo or hosted video.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
