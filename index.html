@@ -3,41 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Interactive wedding website demo by AJAY NXT with story galleries, cinematic films, packages, availability calendar and WhatsApp booking.">
-  <meta name="author" content="AJAY NXT">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="Luxury Indian wedding planner and photographer concept website with ten switchable hero styles.">
   <meta name="theme-color" content="#120b0d">
-  <link rel="canonical" href="https://wedding.ajaynxt.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="AJAY NXT">
-  <meta property="og:title" content="Wedding Photographer Website Demo | AJAY NXT">
-  <meta property="og:description" content="Story galleries, cinematic films, packages, availability calendar and WhatsApp booking.">
-  <meta property="og:url" content="https://wedding.ajaynxt.com/">
-  <meta property="og:image" content="https://images.pexels.com/photos/32379184/pexels-photo-32379184.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=2000">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Wedding Photographer Website Demo | AJAY NXT">
-  <meta name="twitter:description" content="Interactive wedding photography and films website demo by AJAY NXT.">
-  <meta name="twitter:image" content="https://images.pexels.com/photos/32379184/pexels-photo-32379184.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=2000">
-  <title>Wedding Photographer Website Demo | AJAY NXT</title>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "Wedding Photographer Website Demo",
-      "url": "https://wedding.ajaynxt.com/",
-      "description": "Interactive wedding website demo with story galleries, cinematic films, packages and booking.",
-      "creator": {
-        "@type": "Person",
-        "name": "AJAY NXT",
-        "url": "https://ajaynxt.com/",
-        "sameAs": [
-          "https://www.instagram.com/ajay_nxt_/",
-          "https://www.linkedin.com/in/ajaynxt/"
-        ]
-      }
-    }
-  </script>
+  <title>VOW & FRAME | AJAYNXT Wedding Showcase</title>
   <link rel="stylesheet" href="styles.css">
+
+  <style id="hero-info-box-styles">
+    /* Photo-first hero: wedding details and enquiry stay inside one compact clickable box. */
+    .hero-grid{grid-template-columns:1fr!important;min-height:720px;padding-bottom:98px;position:relative}
+    .hero-copy{max-width:850px;position:relative;z-index:2}
+    .hero-copy>p,.hero-copy>.hero-trust{display:none!important}
+    .hero-info-box{position:absolute;right:0;bottom:42px;z-index:14;width:88px}
+    .hero-info-box summary{list-style:none;width:88px;min-height:80px;padding:10px 8px;border:1px solid rgba(255,255,255,.34);border-radius:22px;background:rgba(24,8,15,.76);backdrop-filter:blur(18px);box-shadow:0 18px 58px rgba(0,0,0,.38);display:grid;place-items:center;gap:2px;color:#fff;cursor:pointer;user-select:none;transition:.25s}
+    .hero-info-box summary::-webkit-details-marker{display:none}
+    .hero-info-box summary:hover,.hero-info-box summary:focus-visible{transform:translateY(-3px);border-color:var(--accent);outline:none}
+    .hero-info-box .info-icon{width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:var(--accent);font:900 18px/1 Georgia,serif;box-shadow:0 8px 22px rgba(var(--accent-rgb),.38)}
+    .hero-info-box .info-label{font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .hero-info-box .info-open-label{display:none}
+    .hero-info-box[open] .info-closed-label{display:none}
+    .hero-info-box[open] .info-open-label{display:block}
+    .hero-info-box[open] summary{border-color:var(--accent)}
+    .hero-info-panel{position:absolute;right:0;bottom:98px;width:min(620px,calc(100vw - 44px));max-height:min(74vh,720px);overflow:auto;padding:22px;border:1px solid rgba(255,255,255,.2);border-radius:24px;background:rgba(25,9,16,.95);backdrop-filter:blur(25px);box-shadow:0 36px 110px rgba(0,0,0,.62);color:#fff;animation:heroInfoIn .25s ease-out}
+    .hero-info-panel::-webkit-scrollbar{width:7px}.hero-info-panel::-webkit-scrollbar-thumb{background:rgba(255,255,255,.22);border-radius:20px}
+    .hero-info-heading{padding-right:18px;margin-bottom:14px}
+    .hero-info-heading h2{font-size:30px;line-height:1.05;margin:7px 0 8px}
+    .hero-info-panel #heroText{color:#ddcfd4;margin:0 0 16px;font-size:15px}
+    .hero-info-panel .hero-trust{display:flex!important;margin-bottom:18px;gap:10px}
+    .hero-info-panel .hero-trust span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.07);font-size:11px}
+    .hero-info-box .hero-card{position:static!important;right:auto!important;top:auto!important;bottom:auto!important;width:100%!important;max-width:none!important;min-height:0!important;order:initial!important;border-radius:18px!important;padding:20px!important;background:rgba(255,255,255,.07)!important;box-shadow:none!important;text-align:left!important;color:#fff!important}
+    .hero-info-box .hero-card h2{font-size:30px;margin:8px 0}
+    .hero-info-box .hero-card p{color:#d8cbd0!important}
+    .hero-info-box .hero-card-facts{margin:16px 0;grid-template-columns:repeat(3,1fr)}
+    .hero-info-box .quick-enquiry{position:static!important;width:100%!important;margin:14px 0 0!important;padding:16px!important;grid-template-columns:1fr 1fr!important;background:rgba(255,255,255,.07)!important;border-radius:18px!important;border:1px solid rgba(255,255,255,.12)!important}
+    .hero-info-box .quick-enquiry .button{grid-column:1/-1;width:100%}
+    .hero-info-box .quick-enquiry input,.hero-info-box .quick-enquiry select{background:#160a10;color:#fff;border-color:rgba(255,255,255,.16)}
+    .hero-info-box .quick-enquiry option{color:#111}
+    @keyframes heroInfoIn{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+    @media(max-width:1000px){
+      .hero-grid{min-height:750px;padding-top:78px;padding-bottom:112px}
+      .hero-info-box{right:4px;bottom:30px}
+      .hero.hero-02 .hero-copy,.hero.hero-05 .hero-copy{text-align:left!important;margin:0!important}
+      .hero.hero-02 .hero-actions,.hero.hero-05 .hero-actions{justify-content:flex-start!important}
+    }
+    @media(max-width:650px){
+      .hero{min-height:790px;padding-bottom:0}
+      .hero-grid{min-height:720px;padding-bottom:110px;align-items:center}
+      .hero-copy{max-width:94%}
+      .hero h1{font-size:clamp(43px,13vw,60px)}
+      .hero-info-box{position:absolute;right:0;bottom:18px}
+      .hero-info-panel{position:fixed;left:12px;right:12px;bottom:80px;width:auto;max-height:71vh;padding:18px;border-radius:20px}
+      .hero-info-box .quick-enquiry{grid-template-columns:1fr!important}
+      .hero-info-box .quick-enquiry .button{grid-column:auto}
+      .hero-info-box .hero-card-facts{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(prefers-reduced-motion:reduce){.hero-info-panel{animation:none}}
+  </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -111,39 +131,53 @@
       <div class="hero-copy reveal">
         <span class="eyebrow" id="heroKicker">Wedding Photography · Films · Planning</span>
         <h1 id="heroTitle">Your Wedding, Remembered Like a Film.</h1>
-        <p id="heroText">A luxury Indian wedding experience built around real emotion, thoughtful planning and imagery that still feels alive years later.</p>
         <div class="hero-actions">
           <a class="button primary" href="#stories">View Wedding Stories</a>
           <button class="button glass" id="watchShowreel">Watch Showreel</button>
         </div>
-        <div class="hero-trust">
-          <span>Photography & Films</span>
-          <span>Destination Planning</span>
-          <span>Albums & Reels</span>
-        </div>
       </div>
 
-      <aside class="hero-card reveal">
-        <span class="mini-label" id="heroCardLabel">Featured Celebration</span>
-        <h2 id="heroCardTitle">A Royal Udaipur Wedding</h2>
-        <p id="heroCardText">Three days · Palace venue · Photography, films and guest experience</p>
-        <div class="hero-card-facts">
-          <span><b>3</b> days</span>
-          <span><b>6</b> events</span>
-          <span><b>1</b> story</span>
-        </div>
-        <a class="button primary" href="#contact">Plan a Consultation</a>
-      </aside>
-    </div>
+      <details class="hero-info-box reveal" id="heroInfoBox">
+        <summary aria-label="Open wedding details and availability enquiry">
+          <span class="info-icon" aria-hidden="true">i</span>
+          <span class="info-label info-closed-label">Details</span>
+          <span class="info-label info-open-label">Close</span>
+        </summary>
+        <div class="hero-info-panel">
+          <div class="hero-info-heading">
+            <span class="mini-label">Wedding Information</span>
+            <h2>Celebration details & availability</h2>
+          </div>
+          <p id="heroText">A luxury Indian wedding experience built around real emotion, thoughtful planning and imagery that still feels alive years later.</p>
+          <div class="hero-trust">
+            <span>Photography & Films</span>
+            <span>Destination Planning</span>
+            <span>Albums & Reels</span>
+          </div>
 
-    <form class="quick-enquiry shell reveal" id="quickEnquiry">
-      <label>Wedding Date<input name="date" type="date" required></label>
-      <label>City / Destination<input name="city" placeholder="e.g. Jaipur, Goa, Delhi" required></label>
-      <label>Guest Count<select name="guests"><option>Under 100</option><option>100–250</option><option>250–500</option><option>500+</option></select></label>
-      <label>Primary Requirement<select name="requirement"><option>Photography & Films</option><option>Full Wedding Planning</option><option>Destination Wedding</option><option>Décor & Production</option><option>Social Reels & Content</option></select></label>
-      <label>Phone / WhatsApp<input name="phone" inputmode="tel" required></label>
-      <button class="button primary" type="submit">Check Availability</button>
-    </form>
+          <aside class="hero-card">
+            <span class="mini-label" id="heroCardLabel">Featured Celebration</span>
+            <h2 id="heroCardTitle">A Royal Udaipur Wedding</h2>
+            <p id="heroCardText">Three days · Palace venue · Photography, films and guest experience</p>
+            <div class="hero-card-facts">
+              <span><b>3</b> days</span>
+              <span><b>6</b> events</span>
+              <span><b>1</b> story</span>
+            </div>
+            <a class="button primary" href="#contact">Plan a Consultation</a>
+          </aside>
+
+          <form class="quick-enquiry" id="quickEnquiry">
+            <label>Wedding Date<input name="date" type="date" required></label>
+            <label>City / Destination<input name="city" placeholder="e.g. Jaipur, Goa, Delhi" required></label>
+            <label>Guest Count<select name="guests"><option>Under 100</option><option>100–250</option><option>250–500</option><option>500+</option></select></label>
+            <label>Primary Requirement<select name="requirement"><option>Photography & Films</option><option>Full Wedding Planning</option><option>Destination Wedding</option><option>Décor & Production</option><option>Social Reels & Content</option></select></label>
+            <label>Phone / WhatsApp<input name="phone" inputmode="tel" required></label>
+            <button class="button primary" type="submit">Check Availability</button>
+          </form>
+        </div>
+      </details>
+    </div>
 
     <div class="style-controller shell">
       <button id="previousStyle" aria-label="Previous hero style">‹</button>
