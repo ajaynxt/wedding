@@ -122,6 +122,38 @@ footer strong{color:#765354;letter-spacing:.15em}
 @media(max-width:720px){.topnote{display:none}.hero{padding-top:24px}.workspace{grid-template-columns:1fr}.stage{min-height:550px}.scene{height:460px}.envelope{top:132px}.panel-body{padding:16px}.panel-head{padding:17px 16px}.details-after{grid-template-columns:1fr}.detail-chips{justify-content:flex-start}}
 @media(max-width:430px){.hero{padding-bottom:18px}.intro{font-size:11px}.stage{min-height:495px;padding-left:4px;padding-right:4px}.scene{height:415px}.envelope{top:122px;height:222px;width:92%}.card{top:24px;height:278px;width:97%}.card-inside{padding:5px;grid-template-columns:.78fr 1.22fr}.page-details{padding:12px 8px}.page-photo img{object-position:52% 35%}.photo-caption{font-size:14px}.names{font-size:22px}.invite-copy{font-size:9px}.invite-date{font-size:9px}.invite-venue{font-size:8px}.cover-names{font-size:26px}.cover-symbol{font-size:40px}.cover-corner.a{top:20px;left:19px}.cover-corner.b{top:20px;right:19px}.cover-corner.c{bottom:20px;left:19px}.cover-corner.d{bottom:20px;right:19px}.controls{bottom:14px;gap:6px}.btn{padding:0 11px;font-size:8px;min-height:38px}.scene-caption{font-size:7px}.details-after{padding:17px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Cinematic celebration scenes */
+.cinema{margin-top:22px;border:1px solid #d9c8b3;background:#fbf7f0;overflow:hidden}
+.cinema-head{padding:20px 22px 14px;display:flex;justify-content:space-between;gap:14px;align-items:end}
+.cinema-head h2{font:400 clamp(24px,3vw,34px) Georgia,serif;margin:5px 0;color:#432a30}
+.cinema-head p{margin:0;color:#8c7970;font-size:11px;line-height:1.6;max-width:430px}
+.cinema-kicker{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:#9c7a45;font-weight:800}
+.movie-stage{position:relative;min-height:365px;overflow:hidden;background:#1f1820;color:#fff4dd;isolation:isolate}
+.movie-stage:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 70%,#9b6a5530,transparent 60%),linear-gradient(180deg,#211b2b 0%,#4b2c3a 65%,#1b1720 100%);z-index:-2}
+.movie-stage:after{content:"";position:absolute;inset:0;opacity:.16;pointer-events:none;background-image:radial-gradient(#fff 0.7px,transparent .7px);background-size:17px 17px;z-index:5}
+.movie-scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(1.07);transition:opacity .8s ease,transform 2.8s ease;pointer-events:none}
+.movie-scene.active{opacity:1;transform:scale(1);z-index:1}
+.scene-glow{position:absolute;width:260px;height:260px;border-radius:50%;background:#f6c66c25;filter:blur(38px);left:calc(50% - 130px);top:40px;animation:glowPulse 4s ease-in-out infinite alternate}
+.scene-art{position:relative;width:min(520px,92%);height:300px;filter:drop-shadow(0 18px 22px #0006);animation:floatScene 4s ease-in-out infinite}
+.scene-art svg{width:100%;height:100%;overflow:visible}
+.scene-floor{position:absolute;bottom:10px;left:15%;right:15%;height:34px;border-radius:50%;background:#08070b8a;filter:blur(12px)}
+.scene-label{position:absolute;left:22px;bottom:20px;z-index:6}
+.scene-label small{display:block;font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:#e9c77d;margin-bottom:7px}
+.scene-label strong{font:italic 28px Georgia,serif;font-weight:400;text-shadow:0 2px 12px #0008}
+.scene-counter{position:absolute;right:22px;bottom:24px;z-index:6;font-size:9px;letter-spacing:.18em;color:#f4dca9}
+.movie-controls{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:13px 16px;border-top:1px solid #dfd0bc;background:#fffaf1}
+.scene-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.scene-tab{border:1px solid #dfceb5;background:transparent;color:#7c6258;padding:9px 11px;font-size:9px;cursor:pointer}
+.scene-tab[aria-pressed=true]{background:#641d31;border-color:#641d31;color:#fff8eb}
+.movie-actions{display:flex;gap:7px}
+.movie-actions .btn{min-height:36px;padding:0 12px}
+@keyframes floatScene{0%,100%{transform:translateY(0) rotate(-.3deg)}50%{transform:translateY(-7px) rotate(.3deg)}}
+@keyframes glowPulse{from{opacity:.55;transform:scale(.9)}to{opacity:1;transform:scale(1.12)}}
+@keyframes sceneShimmer{0%,100%{opacity:.3}50%{opacity:.9}}
+@media(max-width:620px){.cinema-head{align-items:start;flex-direction:column;padding:18px 16px 13px}.movie-stage{min-height:310px}.scene-art{height:245px;width:100%}.scene-label{left:15px;bottom:15px}.scene-label strong{font-size:24px}.scene-counter{right:15px;bottom:18px}.movie-controls{align-items:stretch;flex-direction:column}.movie-actions{justify-content:flex-end}.scene-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.scene-tab{padding:9px 3px;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.movie-scene,.scene-art,.scene-glow{animation:none!important;transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -222,6 +254,65 @@ footer strong{color:#765354;letter-spacing:.15em}
    </div>
   </aside>
  </section>
+
+ <section class="cinema" aria-label="Animated wedding celebration">
+  <div class="cinema-head"><div><div class="cinema-kicker">The celebrations, in motion</div><h2>Every ritual has a story.</h2></div><p>Play through the wedding celebrations—from turmeric and mehndi to the baraat and the mandap. Choose a scene or let the story play.</p></div>
+  <div class="movie-stage" id="movieStage">
+   <div class="movie-scene active" data-scene="0">
+    <div class="scene-glow"></div><div class="scene-art"><div class="scene-floor"></div>
+     <svg viewBox="0 0 520 300" role="img" aria-label="Illustrated haldi celebration with bride and groom">
+      <defs><linearGradient id="haldiBg" x2="0" y2="1"><stop stop-color="#e9a84b"/><stop offset="1" stop-color="#8d3d36"/></linearGradient><linearGradient id="yellowCloth" x2="1" y2="1"><stop stop-color="#fff0a2"/><stop offset="1" stop-color="#e7a82f"/></linearGradient><radialGradient id="skin"><stop stop-color="#dba078"/><stop offset="1" stop-color="#a85e43"/></radialGradient></defs>
+      <g opacity=".8" fill="#f5d77c"><circle cx="68" cy="45" r="4"/><circle cx="106" cy="81" r="3"/><circle cx="426" cy="43" r="4"/><circle cx="462" cy="91" r="3"/><circle cx="144" cy="35" r="2"/><circle cx="382" cy="76" r="2"/></g>
+      <path d="M70 245 Q260 280 450 245" fill="none" stroke="#f5cf7a" stroke-width="2" opacity=".5"/>
+      <g transform="translate(146 58)"><ellipse cx="45" cy="209" rx="55" ry="12" fill="#241319" opacity=".3"/><path d="M6 102 Q-7 142 1 201 L90 201 Q97 147 83 102Z" fill="url(#yellowCloth)" stroke="#f9d56e" stroke-width="2"/><path d="M9 110 L77 188 M81 110 L14 188" stroke="#fff1b5" stroke-width="3" opacity=".8"/><circle cx="45" cy="64" r="39" fill="#4a211d"/><circle cx="45" cy="65" r="29" fill="url(#skin)"/><path d="M16 62 Q14 21 46 24 Q79 25 74 61 Q62 41 47 40 Q31 41 16 62" fill="#24151a"/><circle cx="34" cy="65" r="2.7" fill="#2c1717"/><circle cx="56" cy="65" r="2.7" fill="#2c1717"/><path d="M37 79 Q45 86 54 78" fill="none" stroke="#7b342b" stroke-width="2.5" stroke-linecap="round"/><path d="M10 120 Q-15 119 -24 91" fill="none" stroke="#b56c4d" stroke-width="13" stroke-linecap="round"/><path d="M83 121 Q109 112 112 91" fill="none" stroke="#b56c4d" stroke-width="13" stroke-linecap="round"/><circle cx="112" cy="89" r="8" fill="#bd7954"/><circle cx="-24" cy="91" r="8" fill="#bd7954"/><circle cx="45" cy="96" r="5" fill="#e5b746"/><path d="M24 33 Q45 15 66 33" fill="none" stroke="#e3ba54" stroke-width="4"/></g>
+      <g transform="translate(283 76)"><ellipse cx="42" cy="191" rx="52" ry="11" fill="#241319" opacity=".3"/><path d="M7 95 Q-1 135 0 186 L85 186 Q89 135 76 95Z" fill="#fff0b0" stroke="#d9a94b" stroke-width="2"/><path d="M12 110 L74 172 M74 110 L12 172" stroke="#e4ba5e" stroke-width="2"/><circle cx="42" cy="58" r="38" fill="#28151a"/><circle cx="42" cy="60" r="28" fill="url(#skin)"/><path d="M14 58 Q12 18 43 20 Q72 21 70 57 Q57 35 41 36 Q26 37 14 58" fill="#2a1718"/><circle cx="32" cy="59" r="2.6" fill="#241414"/><circle cx="51" cy="59" r="2.6" fill="#241414"/><path d="M34 72 Q42 79 50 72" fill="none" stroke="#7b342b" stroke-width="2.5" stroke-linecap="round"/><path d="M7 111 Q-12 97 -17 78" fill="none" stroke="#b56c4d" stroke-width="12" stroke-linecap="round"/><path d="M77 112 Q96 101 103 80" fill="none" stroke="#b56c4d" stroke-width="12" stroke-linecap="round"/><circle cx="-17" cy="77" r="7" fill="#bd7954"/><circle cx="103" cy="80" r="7" fill="#bd7954"/><path d="M17 31 Q42 8 67 31" fill="none" stroke="#e0b34c" stroke-width="4"/></g>
+      <g fill="#f8d85e"><circle cx="254" cy="42" r="5"/><circle cx="245" cy="64" r="3"/><circle cx="268" cy="73" r="4"/><circle cx="122" cy="121" r="4"/><circle cx="397" cy="133" r="5"/></g>
+      <g stroke="#f7df8a" stroke-width="2" fill="none" opacity=".75"><path d="M30 28 Q45 45 30 62 M490 24 Q475 42 491 59"/><path d="M42 35 l-8 7 8 7 M479 32 l8 8 -8 8"/></g>
+     </svg>
+    </div><div class="scene-label"><small>01 · Haldi</small><strong>Golden blessings</strong></div><div class="scene-counter">01 / 04</div>
+   </div>
+   <div class="movie-scene" data-scene="1">
+    <div class="scene-glow"></div><div class="scene-art"><div class="scene-floor"></div>
+     <svg viewBox="0 0 520 300" role="img" aria-label="Illustrated mehndi celebration with bride and henna patterns">
+      <defs><linearGradient id="mehndiBg" x2="0" y2="1"><stop stop-color="#287d67"/><stop offset="1" stop-color="#17352f"/></linearGradient><linearGradient id="mehndiDress" x2="1" y2="1"><stop stop-color="#f5c8d1"/><stop offset="1" stop-color="#a84769"/></linearGradient></defs>
+      <g stroke="#e7c879" fill="none" stroke-width="2" opacity=".7"><path d="M50 40 Q80 65 50 90 Q20 65 50 40Z"/><path d="M470 30 Q500 55 470 80 Q440 55 470 30Z"/><path d="M90 35 Q110 48 90 61 Q70 48 90 35Z"/><path d="M430 60 Q450 73 430 86 Q410 73 430 60Z"/></g>
+      <g transform="translate(185 28)"><ellipse cx="76" cy="245" rx="75" ry="13" fill="#070e0c" opacity=".4"/><path d="M20 111 Q-3 160 0 235 L151 235 Q154 160 130 111Z" fill="url(#mehndiDress)" stroke="#f2cc8c" stroke-width="2"/><path d="M21 132 L130 210 M130 132 L21 210 M12 172 L142 172" stroke="#f3d48f" stroke-width="2" opacity=".85"/><path d="M26 111 Q76 77 125 111" fill="#4a202b"/><circle cx="76" cy="70" r="42" fill="#32191d"/><circle cx="76" cy="72" r="31" fill="#c78360"/><path d="M44 66 Q37 25 77 26 Q115 28 108 68 Q92 43 77 43 Q59 44 44 66" fill="#201319"/><circle cx="64" cy="72" r="2.8" fill="#241414"/><circle cx="86" cy="72" r="2.8" fill="#241414"/><path d="M66 84 Q76 92 86 84" fill="none" stroke="#7b342b" stroke-width="2.5" stroke-linecap="round"/><path d="M38 128 Q9 123 0 93" fill="none" stroke="#c78360" stroke-width="13" stroke-linecap="round"/><path d="M114 128 Q142 117 151 95" fill="none" stroke="#c78360" stroke-width="13" stroke-linecap="round"/><circle cx="0" cy="92" r="8" fill="#d3946d"/><circle cx="151" cy="94" r="8" fill="#d3946d"/><path d="M53 39 Q76 14 99 39" fill="none" stroke="#e7c879" stroke-width="5"/><circle cx="76" cy="35" r="6" fill="#e7c879"/><g transform="translate(130 82) rotate(12)"><path d="M0 0 Q18 -15 30 0 L39 22 Q23 35 8 22Z" fill="#d3946d" stroke="#f4d9b2" stroke-width="1.5"/><path d="M8 5 Q19 15 30 5 M11 13 l15 -7 M15 21 l12 -6" fill="none" stroke="#27644e" stroke-width="2"/></g></g>
+      <g fill="#e8c77b"><circle cx="145" cy="75" r="4"/><circle cx="372" cy="62" r="5"/><circle cx="400" cy="106" r="3"/><circle cx="118" cy="130" r="3"/></g>
+      <g stroke="#e8c77b" fill="none" stroke-width="1.5"><path d="M55 190 Q80 160 105 190 Q80 220 55 190Z"/><path d="M415 182 Q440 152 465 182 Q440 212 415 182Z"/></g>
+     </svg>
+    </div><div class="scene-label"><small>02 · Mehndi</small><strong>Patterns of love</strong></div><div class="scene-counter">02 / 04</div>
+   </div>
+   <div class="movie-scene" data-scene="2">
+    <div class="scene-glow"></div><div class="scene-art"><div class="scene-floor"></div>
+     <svg viewBox="0 0 520 300" role="img" aria-label="Illustrated groom on a decorated horse with dancing baraat guests">
+      <defs><linearGradient id="horseCoat" x2="1" y2="1"><stop stop-color="#fff0d0"/><stop offset="1" stop-color="#a98268"/></linearGradient><linearGradient id="sherwani" x2="1" y2="1"><stop stop-color="#f7d98a"/><stop offset="1" stop-color="#b98231"/></linearGradient></defs>
+      <g fill="#f6d781" opacity=".9"><circle cx="65" cy="48" r="3"/><circle cx="105" cy="72" r="2"/><circle cx="435" cy="42" r="3"/><circle cx="465" cy="78" r="2"/><circle cx="390" cy="28" r="2"/></g>
+      <g transform="translate(112 90)"><ellipse cx="145" cy="170" rx="152" ry="18" fill="#08070b" opacity=".45"/><path d="M32 91 Q5 74 11 42 Q16 21 36 34 L53 61 Q83 42 130 52 Q175 58 194 89 L209 118 Q198 142 169 145 L70 145 Q39 136 32 91Z" fill="url(#horseCoat)" stroke="#6d4738" stroke-width="2"/><path d="M37 58 Q19 28 43 22 L62 54Z" fill="#a87d61" stroke="#6d4738" stroke-width="2"/><path d="M57 65 Q70 47 86 65 L75 95Z" fill="#5b3028"/><circle cx="49" cy="68" r="4" fill="#25171a"/><path d="M25 90 Q7 108 18 132 L29 130 L34 100 M72 139 L69 171 L84 171 L94 139 M157 139 L164 170 L179 170 L178 135" fill="url(#horseCoat)" stroke="#6d4738" stroke-width="2"/><path d="M27 85 Q76 113 187 92" fill="none" stroke="#b32442" stroke-width="7"/><path d="M44 76 Q89 96 174 79" fill="none" stroke="#f2cf70" stroke-width="4"/><g fill="#d9aa4f"><circle cx="48" cy="81" r="5"/><circle cx="75" cy="89" r="4"/><circle cx="105" cy="92" r="4"/><circle cx="136" cy="89" r="4"/><circle cx="166" cy="84" r="4"/></g><path d="M90 57 Q105 5 131 28 L145 59Z" fill="#25151c"/><circle cx="117" cy="42" r="22" fill="#b97853"/><path d="M94 43 Q88 15 117 14 Q145 15 140 43 L132 30 L102 30Z" fill="#28151b"/><path d="M97 21 Q117 -3 137 21 L143 28 L91 28Z" fill="url(#sherwani)" stroke="#e9c774" stroke-width="2"/><path d="M99 62 L137 62 L153 102 L85 102Z" fill="url(#sherwani)" stroke="#e9c774" stroke-width="2"/><path d="M117 65 L117 99 M104 73 L130 73 M103 83 L131 83" stroke="#fff0bb" stroke-width="2"/><path d="M98 69 Q75 83 65 70 M136 69 Q158 81 171 64" fill="none" stroke="#b97853" stroke-width="9" stroke-linecap="round"/></g>
+      <g transform="translate(355 100)"><ellipse cx="28" cy="142" rx="31" ry="7" fill="#08070b" opacity=".4"/><path d="M5 53 Q-2 85 0 139 L58 139 Q61 85 51 53Z" fill="#2c8c71" stroke="#e9c774" stroke-width="2"/><circle cx="29" cy="30" r="22" fill="#b97853"/><path d="M8 31 Q3 8 29 7 Q52 8 50 31 L42 20 L17 20Z" fill="#28151b"/><path d="M9 60 Q-8 45 -14 25 M49 60 Q68 46 73 24" fill="none" stroke="#b97853" stroke-width="9" stroke-linecap="round"/><path d="M-14 25 l-7 -9 M73 24 l7 -9" stroke="#e9c774" stroke-width="5" stroke-linecap="round"/></g>
+      <g stroke="#e8c77b" stroke-width="2" fill="none"><path d="M38 140 Q55 118 72 140 Q55 162 38 140Z"/><path d="M450 139 Q467 117 484 139 Q467 161 450 139Z"/></g>
+     </svg>
+    </div><div class="scene-label"><small>03 · Baraat</small><strong>Let the dhol play</strong></div><div class="scene-counter">03 / 04</div>
+   </div>
+   <div class="movie-scene" data-scene="3">
+    <div class="scene-glow"></div><div class="scene-art"><div class="scene-floor"></div>
+     <svg viewBox="0 0 520 300" role="img" aria-label="Illustrated bride and groom at a flower decorated wedding mandap">
+      <defs><linearGradient id="mandap" x2="0" y2="1"><stop stop-color="#e9c87c"/><stop offset="1" stop-color="#8f3b4a"/></linearGradient><linearGradient id="brideRed" x2="1" y2="1"><stop stop-color="#d74b59"/><stop offset="1" stop-color="#741b37"/></linearGradient></defs>
+      <g stroke="#e8c77b" stroke-width="3" fill="none"><path d="M105 225 L105 63 Q260 2 415 63 L415 225"/><path d="M82 67 Q260 -14 438 67"/><path d="M120 82 Q260 26 400 82"/></g>
+      <g fill="#f1d184"><circle cx="116" cy="71" r="6"/><circle cx="151" cy="54" r="6"/><circle cx="190" cy="39" r="6"/><circle cx="230" cy="31" r="6"/><circle cx="270" cy="31" r="6"/><circle cx="310" cy="39" r="6"/><circle cx="350" cy="54" r="6"/><circle cx="390" cy="71" r="6"/></g>
+      <g transform="translate(151 69)"><ellipse cx="51" cy="186" rx="58" ry="10" fill="#08070b" opacity=".4"/><path d="M3 91 Q-10 131 0 180 L101 180 Q108 132 94 91Z" fill="url(#brideRed)" stroke="#f1d184" stroke-width="2"/><path d="M10 108 L91 171 M90 108 L11 171 M8 140 L95 140" stroke="#f1d184" stroke-width="2"/><circle cx="51" cy="56" r="37" fill="#29141b"/><circle cx="51" cy="59" r="27" fill="#c78360"/><path d="M24 56 Q18 20 52 20 Q84 22 78 57 Q62 36 49 37 Q34 38 24 56" fill="#28151b"/><circle cx="41" cy="60" r="2.5" fill="#251414"/><circle cx="60" cy="60" r="2.5" fill="#251414"/><path d="M42 72 Q51 79 60 72" fill="none" stroke="#7b342b" stroke-width="2.5"/><path d="M20 31 Q51 2 82 31" fill="none" stroke="#e8c77b" stroke-width="5"/><path d="M9 104 Q-11 111 -20 93 M94 104 Q114 111 124 92" fill="none" stroke="#c78360" stroke-width="11" stroke-linecap="round"/><path d="M-22 91 Q51 119 125 91" fill="none" stroke="#f0c9a2" stroke-width="5"/></g>
+      <g transform="translate(269 80)"><ellipse cx="49" cy="174" rx="55" ry="10" fill="#08070b" opacity=".4"/><path d="M6 88 Q-2 125 0 170 L98 170 Q103 124 90 88Z" fill="#f3d78d" stroke="#c29140" stroke-width="2"/><path d="M11 105 L88 159 M88 105 L11 159" stroke="#fff0ba" stroke-width="2"/><circle cx="49" cy="54" r="36" fill="#29141b"/><circle cx="49" cy="56" r="26" fill="#b97853"/><path d="M23 54 Q18 19 49 20 Q80 20 75 54 L66 38 L35 38Z" fill="#28151b"/><path d="M25 29 Q49 3 73 29 L79 36 L19 36Z" fill="url(#mandap)" stroke="#f1d184" stroke-width="2"/><circle cx="40" cy="57" r="2.5" fill="#251414"/><circle cx="58" cy="57" r="2.5" fill="#251414"/><path d="M41 69 Q49 75 58 69" fill="none" stroke="#7b342b" stroke-width="2.5"/><path d="M12 101 Q-5 87 -12 70 M88 101 Q107 86 115 70" fill="none" stroke="#b97853" stroke-width="11" stroke-linecap="round"/></g>
+      <g fill="#f5d58a"><circle cx="93" cy="115" r="4"/><circle cx="423" cy="116" r="4"/><circle cx="135" cy="176" r="3"/><circle cx="386" cy="175" r="3"/></g>
+     </svg>
+    </div><div class="scene-label"><small>04 · Wedding</small><strong>A promise, forever</strong></div><div class="scene-counter">04 / 04</div>
+   </div>
+  </div>
+  <div class="movie-controls">
+   <div class="scene-tabs" role="group" aria-label="Choose wedding scene">
+    <button class="scene-tab" data-goto="0" aria-pressed="true">Haldi</button><button class="scene-tab" data-goto="1" aria-pressed="false">Mehndi</button><button class="scene-tab" data-goto="2" aria-pressed="false">Baraat</button><button class="scene-tab" data-goto="3" aria-pressed="false">Wedding</button>
+   </div>
+   <div class="movie-actions"><button class="btn secondary" id="moviePause">Pause</button><button class="btn" id="moviePlay">▶ Play story</button></div>
+  </div>
+ </section>
  <section class="details-after">
   <div><h2>Made for the people who matter.</h2><p>One elegant invitation for the date, the place and all the little celebrations before the big day.</p></div>
   <div class="detail-chips"><span class="chip">Wedding ceremony</span><span class="chip">Family celebrations</span><span class="chip">Mobile-ready preview</span></div>
@@ -281,6 +372,21 @@ document.querySelectorAll('.swatch').forEach(btn=>btn.addEventListener('click',(
  document.querySelectorAll('.swatch').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
  $('paletteLabel').textContent=p.label;
 }));
+
+const movieScenes=[...document.querySelectorAll('.movie-scene')];
+const movieTabs=[...document.querySelectorAll('.scene-tab')];
+let movieIndex=0,movieTimer=null,moviePlaying=false;
+function showMovieScene(index){
+ movieIndex=(index+movieScenes.length)%movieScenes.length;
+ movieScenes.forEach((scene,i)=>scene.classList.toggle('active',i===movieIndex));
+ movieTabs.forEach((tab,i)=>tab.setAttribute('aria-pressed',String(i===movieIndex)));
+}
+function stopMovie(){if(movieTimer)clearInterval(movieTimer);movieTimer=null;moviePlaying=false;$('moviePause').textContent='Pause';$('moviePlay').textContent='▶ Play story'}
+function playMovie(){if(moviePlaying){stopMovie();return}moviePlaying=true;$('moviePlay').textContent='Playing…';$('moviePause').textContent='Pause';movieTimer=setInterval(()=>showMovieScene(movieIndex+1),3600)}
+movieTabs.forEach(tab=>tab.addEventListener('click',()=>{stopMovie();showMovieScene(Number(tab.dataset.goto))}));
+$('moviePlay').addEventListener('click',playMovie);
+$('moviePause').addEventListener('click',stopMovie);
+
 updateInvite();
 </script>
 </body>
